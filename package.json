@@ -1,0 +1,31 @@
+{
+  "name": "knex-migrations-and-seeds-practice",
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "nodemon index.js",
+    "knex:init": "knex init",
+    "connect": "psql -U postgres -d knex_practice",
+    "migrate": "knex migrate:latest",
+    "migrate:make": "knex migrate:make",
+    "rollback": "knex migrate:rollback",
+    "seed": "knex seed:run",
+    "seed:make": "knex seed:make",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "knex": "^2.4.2",
+    "pg": "^8.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.38.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  }
+}
